@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Purchase North Wind | Author Michael Hale</title>
     <link rel="stylesheet" href="css/app.css">
 </head>
@@ -133,9 +134,6 @@
         <li class="menu-text">Copyright Michael Hale 2018 &copy;</li>
     </ul>
 </div>
-<script src="bower_components/jquery/dist/jquery.js"></script>
-<script src="bower_components/what-input/dist/what-input.js"></script>
-<script src="bower_components/foundation-sites/dist/js/foundation.js"></script>
-<script src="js/app.js"></script>
+<script src="/js/app.js"></script>
 </body>
 </html>
