@@ -1,0 +1,162 @@
+h1, h2 {
+  text-transform: uppercase;
+}
+
+blockquote {
+  text-align: center;
+  font-size: 1.6rem;
+  font-family: 'Libre Baskerville', serif;
+  font-weight: 600;
+  text-shadow: 0px 1px 1px #0A0A0A;
+  color: $white;
+}
+
+.top-bar {
+  box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);
+
+  .menu {
+
+    li {
+
+      a {
+        color: $white;
+        font-weight: bold;
+
+        &:hover {
+          background-color: lighten($black, 8%);
+        }
+      }
+
+      &.menu-purchase-link {
+        background-color: $primary-color;
+
+        a {
+          color: #fff;
+
+          &:hover {
+            background-color: lighten($primary-color, 8%);
+          }
+        }
+      }
+    }
+  }
+}
+
+.banner-hero {
+  position: relative;
+  z-index: -1;
+}
+
+.hero-image {
+  width: 100%;
+}
+
+#endorsement, #the-book {
+  padding: 3rem;
+  background-color: #550011;
+  box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);
+}
+
+#purchase, #the-author {
+  padding: 1rem;
+}
+
+#the-book {
+  p {
+    font-size: 1.2rem;
+    color: $white;
+    text-shadow: 0px 1px 1px #0A0A0A;
+  }
+}
+
+
+/*
+Badge Related Stuff
+ */
+.burst-container {
+  position: absolute;
+  bottom: 100px;
+  right: 100px;
+}
+
+.burst-content {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  top: 0;
+  text-align: center;
+  font-size: .75rem;
+  padding: 8px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+/*
+Badge
+ */
+#burst {
+  background: gold;
+  width: 80px;
+  height: 80px;
+  position: relative;
+  text-align: center;
+}
+#burst:before, #burst:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 80px;
+  width: 80px;
+  background: gold;
+}
+#burst:before {
+  -webkit-transform: rotate(30deg);
+  -moz-transform: rotate(30deg);
+  -ms-transform: rotate(30deg);
+  -o-transform: rotate(30deg);
+}
+#burst:after {
+  -webkit-transform: rotate(60deg);
+  -moz-transform: rotate(60deg);
+  -ms-transform: rotate(60deg);
+  -o-transform: rotate(60deg);
+}
+
+/*
+About the Author
+ */
+// Source: https://designpieces.com/2012/12/social-media-colours-hex-and-rgb/
+$about-the-author-text-transform: uppercase;
+$about-the-author-separator-width: 5rem;
+$about-the-author-separator-thickness: 0.125rem;
+
+.about-the-author {
+  border: 1px solid $medium-gray;
+
+  .separator-left {
+    text-align: left;
+    @include clearfix;
+
+    &::after {
+      position: relative;
+      width: $about-the-author-separator-width;
+      border-bottom: $about-the-author-separator-thickness solid $primary-color;
+      margin: 0.3rem auto 0;
+      margin-left: 0;
+    }
+  }
+
+  .author-title {
+    text-transform: $about-the-author-text-transform;
+  }
+
+  .author-image {
+    border: 1px solid $medium-gray;
+  }
+}
+
+.bottom-bar {
+  font-size: .8rem;
+  color: $medium-gray;
+}
+
