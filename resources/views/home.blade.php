@@ -104,7 +104,7 @@
             <p>“This is weird,” Brice said. “I can’t quite…”, he stopped short and looked at his feet.</p>
             <p>The ground had begun to vibrate, sending tingling sensations up their legs.</p>
             <p>“Holy shit,” William exclaimed. “Look at that!”</p>
-            <p>High up in the atmosphere, hundreds of fireballs were streaking across the sky heading north and north east, each leaving an arcing tracer in its wake. As they watched the light snow unfold it slowly formed a web like appearance as the beams intertwined. A high-pitched buzzing sound rang in their ears.</p>
+            <p>High up in the atmosphere, hundreds of fireballs were streaking across the sky heading north and north east, each leaving an arcing tracer in its wake. As they watched the light show unfold it slowly formed a web like appearance as the beams intertwined. A high-pitched buzzing sound rang in their ears.</p>
             <p>“Since when do meteors make noise, unless they’re getting ready to crash into your house?” John asked curiously.</p>
             <p>Brice shook his head and declared loudly, “They’re not meteors!"</p>
         </div>
