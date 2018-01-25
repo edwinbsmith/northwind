@@ -50,7 +50,7 @@ class HomeController extends Controller
 
             $status = Stripe::orders()->pay(
                 $order['id'],
-                ['source' => $token]
+                ['customer' => $customer['id']]
             );
 
         } catch(Exception $exception) {
