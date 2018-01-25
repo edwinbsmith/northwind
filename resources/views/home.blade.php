@@ -9,6 +9,11 @@
     <link rel="stylesheet" href="css/app.css">
 </head>
 <body>
+@if (session('status'))
+    <div class="alert alert-success">
+        {{ session('status') }}
+    </div>
+@endif
 <div class="top-bar">
     <div class="top-bar-right">
         <ul class="menu" data-smooth-scroll>
@@ -43,7 +48,8 @@
             <img src="images/mockup.png" alt="">
         </div>
         <div class="cell medium-6">
-            <form action="">
+            <form action="/purchase" method="post">
+                {{ csrf_field() }}
                 <div class="grid-x grid-padding-x">
                     <div class="cell">
                         <h2>Purchase <strong>North Wind</strong></h2>
@@ -89,7 +95,11 @@
                         </label>
                     </div>
                     <div class="cell">
-                        <input type="submit" name="submit" value="Pay $25" class="button primary">
+                        <script src="https://checkout.stripe.com/checkout.js" class="stripe-button button primary"
+                                data-key="<?php echo $stripe_key; ?>"
+                                data-description="Purchase North Wind"
+                                data-amount="1500"
+                                data-locale="auto"></script>
                     </div>
                 </div>
             </form>
