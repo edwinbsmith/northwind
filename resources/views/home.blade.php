@@ -85,7 +85,7 @@
                         <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
                                 data-key="<?php echo $stripe_key; ?>"
                                 data-description="Purchase North Wind"
-                                data-amount="1500"
+                                data-amount="1368"
                                 data-locale="auto"></script>
                     </div>
                 </div>

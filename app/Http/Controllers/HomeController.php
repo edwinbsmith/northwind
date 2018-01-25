@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    public function index(Request $request)
+    public function index()
     {
         return view('home', ['stripe_key' => getenv('STRIPE_API_PUBLIC_KEY')]);
     }
@@ -40,7 +40,8 @@ class HomeController extends Controller
                     'address' => [
                         'line1'       => $request['address'],
                         'city'        => $request['city'],
-                        'country'     => $request['state'],
+                        'state'       => $request['state'],
+                        'country'     => 'US',
                         'postal_code' => $request['zip'],
                     ],
                 ],
@@ -55,7 +56,7 @@ class HomeController extends Controller
 
         return redirect()
             ->action('HomeController@index')
-            ->with('success', 'Thanks for purchasing North Wind! Your order number is ' . $order['id'] . '.');
+            ->with('success', 'Thanks for purchasing North Wind! Your book should arrive in 2–3 days.');
 
     }
 }
