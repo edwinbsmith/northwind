@@ -48,6 +48,11 @@ class HomeController extends Controller
                 'email' => $email
             ]);
 
+            $status = Stripe::orders()->pay(
+                $order['id'],
+                ['source' => $token]
+            );
+
         } catch(Exception $exception) {
             return redirect()
                 ->action('HomeController@index')
