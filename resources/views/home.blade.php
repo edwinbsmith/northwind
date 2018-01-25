@@ -30,7 +30,7 @@
 <section id="endorsement">
     <div class="grid-x align-center">
         <div class="cell medium-8">
-            <p class="text-center">Four men, away on a Canadian wilderness fishing trip, dropped off on a remote lake miles from civilization suddenly face the unimaginable. How will they survive? Who will they encounter? What will they face when they return...<br><em>if they return?</em></p>
+            <p class="text-center">Four men, away on a Canadian wilderness fishing trip, dropped off on a remote lake miles from civilization suddenly face the unimaginable. How will they survive? Who will they encounter? What will they face when they return?<br><em>If they return...</em></p>
             <hr>
             <blockquote>
                 “A <span>fresh new voice</span> in thriller fiction, Michael Hale’s <em>North Wind</em> is ripped from today’s headlines, visceral and compelling. Hale is the real deal!”
