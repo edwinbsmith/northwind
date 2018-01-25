@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
         return view('home', ['stripe_key' => getenv('STRIPE_API_PUBLIC_KEY')]);
     }

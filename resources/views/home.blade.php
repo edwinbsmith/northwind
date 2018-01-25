@@ -161,5 +161,24 @@
     </script>
 @endif
 <script src="/js/app.js"></script>
+<script>
+    $(document).ready(function() {
+        var errorModal = $('#error-modal');
+        var successModal = $('#success-modal');
+
+        if (errorModal.length) {
+            var elem = new Foundation.Reveal(errorModal);
+            elem.open();
+        }
+        if (successModal.length) {
+            var elem = new Foundation.Reveal(successModal);
+            elem.open();
+        }
+
+        var stripeButton = $('.stripe-button-el');
+        stripeButton.removeClass('stripe-button-el').addClass('button');
+        stripeButton.html('Purchase your copy!');
+    });
+</script>
 </body>
 </html>
