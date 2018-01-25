@@ -9,11 +9,6 @@
     <link rel="stylesheet" href="css/app.css">
 </head>
 <body>
-@if (session('status'))
-    <div class="alert alert-success">
-        {{ session('status') }}
-    </div>
-@endif
 <div class="top-bar">
     <div class="top-bar-right">
         <ul class="menu" data-smooth-scroll>
@@ -35,8 +30,10 @@
 <section id="endorsement">
     <div class="grid-x align-center">
         <div class="cell medium-8">
+            <p class="text-center">Four men, away on a Canadian wilderness fishing trip, dropped off on a remote lake miles from civilization suddenly face the unimaginable. How will they survive? Who will they encounter? What will they face when they return...<br><em>if they return?</em></p>
+            <hr>
             <blockquote>
-                “A fresh new voice in thriller fiction, Michael Hale’s <strong>North Wind</strong> is ripped from today’s headlines, visceral and compelling. Hale is the real deal!”
+                “A <span>fresh new voice</span> in thriller fiction, Michael Hale’s <em>North Wind</em> is ripped from today’s headlines, visceral and compelling. Hale is the real deal!”
                 <cite>Steve Alten, New York Times best selling author of Meg and Undisclosed.</cite>
             </blockquote>
         </div>
@@ -48,54 +45,44 @@
             <img src="images/mockup.png" alt="">
         </div>
         <div class="cell medium-6">
-            <form action="/purchase" method="post">
+            <form action="/purchase" method="post" data-abide data-validate-on="fieldChange">
                 {{ csrf_field() }}
                 <div class="grid-x grid-padding-x">
+                    <div class="cell">
+                        <div data-abide-error class="alert callout" style="display: none;">
+                            <p><i class="fi-alert"></i> There are some errors in your form.</p>
+                        </div>
+                    </div>
                     <div class="cell">
                         <h2>Purchase <strong>North Wind</strong></h2>
                     </div>
                     <div class="cell">
                         <label for="name">Enter your name
-                            <input type="text" name="name">
+                            <input type="text" name="name" required>
                         </label>
                     </div>
                     <div class="cell">
                         <label for="address">Mailing address
-                            <input type="text" name="address">
+                            <input type="text" name="address" required>
                         </label>
                     </div>
-                    <div class="cell small-12 medium-6">
+                    <div class="cell large-6">
                         <label for="city">City
-                            <input type="text" name="city">
+                            <input type="text" name="city" required>
                         </label>
                     </div>
-                    <div class="cell small-12 medium-3">
+                    <div class="cell medium-6 large-2">
                         <label for="city">State
-                            <input type="text" name="state">
+                            <input type="text" name="state" required>
                         </label>
                     </div>
-                    <div class="cell small-12 medium-3">
-                        <label for="zip">State
-                            <input type="text" name="zip">
-                        </label>
-                    </div>
-                    <div class="cell">
-                        <label for="card">Card
-                            <input type="text" name="card">
-                        </label>
-                    </div>
-                    <div class="cell small-12 medium-6">
-                        <label for="expiration">Expiration
-                            <input type="text" name="expiration">
-                        </label>
-                    </div>
-                    <div class="cell small-12 medium-6">
-                        <label for="cvc">CVC
-                            <input type="text" name="cvc">
+                    <div class="cell medium-6 large-4">
+                        <label for="zip">Zip code
+                            <input type="text" name="zip" required>
                         </label>
                     </div>
                     <div class="cell">
-                        <script src="https://checkout.stripe.com/checkout.js" class="stripe-button button primary"
+                        <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
                                 data-key="<?php echo $stripe_key; ?>"
                                 data-description="Purchase North Wind"
                                 data-amount="1500"
@@ -144,6 +131,35 @@
         <li class="menu-text">Copyright Michael Hale 2018 &copy;</li>
     </ul>
 </div>
+@if (session('success'))
+    <div class="reveal" id="success-modal" data-reveal>
+        <h3>Your order is complete!</h3>
+        <p>{{ session('success') }}</p>
+        <button class="close-button" data-close aria-label="Close modal" type="button">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <script>
+        $(document).ready(function() {
+            $('#success-modal').foundation('open');
+        });
+    </script>
+@endif
+@if (session('error'))
+    <div class="reveal" id="error-modal" data-reveal>
+        <h3>There was an error.</h3>
+        <p>We're sorry, an error has occurred. Please email admin@authormichaelhale.com with the information below.</p>
+        <p><small>{{ session('error') }}</small></p>
+        <button class="close-button" data-close aria-label="Close modal" type="button">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <script>
+        $(document).ready(function() {
+            $('#error-modal').foundation('open');
+        });
+    </script>
+@endif
 <script src="/js/app.js"></script>
 </body>
 </html>

@@ -15237,21 +15237,15 @@ module.exports = __webpack_require__(70);
 
 __webpack_require__(28);
 __webpack_require__(53);
+__webpack_require__(55);
+
 $(document).foundation();
-//
-// window.Vue = require('vue');
 
-/**
- * Next, we will create a fresh Vue application instance and attach it to
- * the page. Then, you may begin adding components to this application
- * or customize the JavaScript scaffolding to fit your unique needs.
- */
-
-// Vue.component('example-component', require('./components/ExampleComponent.vue'));
-//
-// const app = new Vue({
-//     el: '#app'
-// });
+$(document).ready(function () {
+  var stripeButton = $('.stripe-button-el');
+  stripeButton.removeClass('stripe-button-el').addClass('button');
+  stripeButton.html('Purchase your copy!');
+});
 
 /***/ }),
 /* 28 */
@@ -36003,7 +35997,7 @@ __WEBPACK_IMPORTED_MODULE_10__js_foundation_util_touch__["a" /* Touch */].init(_
 __WEBPACK_IMPORTED_MODULE_11__js_foundation_util_triggers__["a" /* Triggers */].init(__WEBPACK_IMPORTED_MODULE_0_jquery___default.a, __WEBPACK_IMPORTED_MODULE_1__js_foundation_core__["a" /* Foundation */]);
 
 
-__WEBPACK_IMPORTED_MODULE_1__js_foundation_core__["a" /* Foundation */].plugin(__WEBPACK_IMPORTED_MODULE_12__js_foundation_abide__["a" /* Abide */], 'Abide');
+__WEBPACK_IMPORTED_MODULE_1__js_foundation_core__["a" /* Foundation */].plugin(__WEBPACK_IMPORTED_MODULE_12__js_foundation_abide__["Abide"], 'Abide');
 
 
 __WEBPACK_IMPORTED_MODULE_1__js_foundation_core__["a" /* Foundation */].plugin(__WEBPACK_IMPORTED_MODULE_13__js_foundation_accordion__["a" /* Accordion */], 'Accordion');
@@ -36422,7 +36416,8 @@ function hyphenate(str) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Abide; });
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Abide", function() { return Abide; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_jquery__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__foundation_plugin__ = __webpack_require__(2);

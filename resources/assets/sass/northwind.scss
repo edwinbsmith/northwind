@@ -9,6 +9,10 @@ blockquote {
   font-weight: 600;
   text-shadow: 0px 1px 1px #0A0A0A;
   color: $white;
+
+  span {
+    color: $primary-color;
+  }
 }
 
 .top-bar {
@@ -53,19 +57,31 @@ blockquote {
 
 #endorsement, #the-book {
   padding: 3rem;
-  background-color: #550011;
+  background-color: #3e3436; // #550011
   box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);
+
+  p {
+    font-size: 1.2rem;
+    color: $white;
+    text-shadow: 0px 1px 1px #0A0A0A;
+  }
 }
 
 #purchase, #the-author {
   padding: 1rem;
 }
 
-#the-book {
+#endorsement {
   p {
-    font-size: 1.2rem;
-    color: $white;
-    text-shadow: 0px 1px 1px #0A0A0A;
+    font-style: italic;
+
+    em {
+      font-weight: 600;
+    }
+  }
+
+  hr {
+    width: 75%;
   }
 }
 

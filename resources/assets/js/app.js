@@ -7,18 +7,12 @@
 
 require('./bootstrap');
 require('foundation-sites');
+require('foundation-sites/js/foundation.abide');
+
 $(document).foundation();
-//
-// window.Vue = require('vue');
 
-/**
- * Next, we will create a fresh Vue application instance and attach it to
- * the page. Then, you may begin adding components to this application
- * or customize the JavaScript scaffolding to fit your unique needs.
- */
-
-// Vue.component('example-component', require('./components/ExampleComponent.vue'));
-//
-// const app = new Vue({
-//     el: '#app'
-// });
+$(document).ready(function() {
+   var stripeButton = $('.stripe-button-el');
+   stripeButton.removeClass('stripe-button-el').addClass('button');
+   stripeButton.html('Purchase your copy!');
+});

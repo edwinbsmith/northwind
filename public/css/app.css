@@ -8537,6 +8537,10 @@ blockquote {
   color: #fefefe;
 }
 
+blockquote span {
+  color: #aa1100;
+}
+
 .top-bar {
   -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.75);
           box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.75);
@@ -8575,9 +8579,16 @@ blockquote {
 #endorsement,
 #the-book {
   padding: 3rem;
-  background-color: #550011;
+  background-color: #3e3436;
   -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.75);
           box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.75);
+}
+
+#endorsement p,
+#the-book p {
+  font-size: 1.2rem;
+  color: #fefefe;
+  text-shadow: 0px 1px 1px #0A0A0A;
 }
 
 #purchase,
@@ -8585,10 +8596,16 @@ blockquote {
   padding: 1rem;
 }
 
-#the-book p {
-  font-size: 1.2rem;
-  color: #fefefe;
-  text-shadow: 0px 1px 1px #0A0A0A;
+#endorsement p {
+  font-style: italic;
+}
+
+#endorsement p em {
+  font-weight: 600;
+}
+
+#endorsement hr {
+  width: 75%;
 }
 
 /*

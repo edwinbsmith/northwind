@@ -26,12 +26,6 @@ class HomeController extends Controller
                 'source'  => $token
             ));
 
-            $charge = Stripe::charges()->create([
-                'customer' => $customer['id'],
-                'currency' => 'USD',
-                'amount'   => 15.00,
-            ]);
-
             $order = Stripe::orders()->create([
                 'currency' => 'usd',
                 'customer' => $customer['id'],
@@ -61,7 +55,7 @@ class HomeController extends Controller
 
         return redirect()
             ->action('HomeController@index')
-            ->with('success', 'Thanks for purchasing North Wind!');
+            ->with('success', 'Thanks for purchasing North Wind! Your order number is ' . $order['id'] . '.');
 
     }
 }
