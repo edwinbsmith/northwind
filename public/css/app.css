@@ -8596,6 +8596,16 @@ blockquote span {
   padding: 1rem;
 }
 
+.purchase-button {
+  margin-bottom: 0;
+}
+
+.list-price {
+  font-size: .9rem;
+  font-weight: bold;
+  color: #ccbbaa;
+}
+
 #endorsement p {
   font-style: italic;
 }

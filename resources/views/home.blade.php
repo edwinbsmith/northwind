@@ -81,12 +81,13 @@
                             <input type="text" name="zip" required>
                         </label>
                     </div>
-                    <div class="cell">
+                    <div class="cell align-middle">
                         <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
                                 data-key="<?php echo $stripe_key; ?>"
                                 data-description="Purchase North Wind"
                                 data-amount="1368"
                                 data-locale="auto"></script>
+                        <span class="list-price">$13.68 ($9.99 + tax + $2.99 shipping)</span>
                     </div>
                 </div>
             </form>
@@ -176,7 +177,7 @@
         }
 
         var stripeButton = $('.stripe-button-el');
-        stripeButton.removeClass('stripe-button-el').addClass('button');
+        stripeButton.removeClass('stripe-button-el').addClass('button purchase-button');
         stripeButton.html('Purchase your copy!');
     });
 </script>

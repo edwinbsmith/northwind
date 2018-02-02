@@ -71,6 +71,16 @@ blockquote {
   padding: 1rem;
 }
 
+.purchase-button {
+  margin-bottom: 0;
+}
+
+.list-price {
+  font-size: .9rem;
+  font-weight: bold;
+  color: $light-gray;
+}
+
 #endorsement {
   p {
     font-style: italic;
